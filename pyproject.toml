@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webhook-inspector"
+version = "0.1.0"
+description = "A tiny Flask service to receive, verify, inspect, and replay webhooks."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Saifullah Khan", email = "saifullah4khan@gmail.com" }]
+keywords = ["webhook", "hmac", "flask", "signature", "replay", "debugging"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Flask",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ["flask>=2.0", "requests>=2.25"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/saifullah4khan/webhook-inspector"
+Issues = "https://github.com/saifullah4khan/webhook-inspector/issues"
+
+[tool.setuptools]
+packages = ["webhook_inspector"]
